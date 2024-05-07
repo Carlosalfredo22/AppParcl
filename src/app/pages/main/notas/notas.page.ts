@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { FirebaseService } from 'src/app/services/firebase.service';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-notas',
@@ -8,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class NotasPage implements OnInit {
 
   constructor() { }
+
+  firebaseSvc = inject(FirebaseService);
+  utilsSvc = inject(UtilsService);
+
 
   ngOnInit() {
   }
